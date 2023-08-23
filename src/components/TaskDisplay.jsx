@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Modal from "react-overlays/Modal";
 
-function TaskDisplay({task, onDelete, onEdit}) {
+function TaskDisplay({task, onDelete}) {
     const [showModal, setshowModal] = useState(false);
 
     const handleOff = () => setshowModal(false);
@@ -12,40 +12,20 @@ function TaskDisplay({task, onDelete, onEdit}) {
         onDelete(task.id);
     };
 
-    const [showEdit, setShowEdit] = useState(false);
-    const [showDisplayIcons, setShowDisplayIcons]= useState(true);
 
-    const handleEditClick= () => {
-        setShowEdit(!showEdit);
-        setShowDisplayIcons(!showDisplayIcons);
-    };
     
-    const handleSubmit = (id, newTitle) => {
-        setShowEdit(false);
-        onEdit(id, newTitle);
-        setShowDisplayIcons(true);
-    }
-
-    let display = <span>{task.title}</span>;
-    if (showEdit){
-        display = <TaskEdit onSubmit={handleSubmit} task={task} />;
-    }
-
     return <section className='container'>
             <div className='taskList'>
             <ul>
                 <li className='taskDis'>
                     <div className='taskCheck'>
-                        <Checkbox checked={false} />
-                        <span>{display}</span>
+                        <input type="checkbox" />
+                        <span>{task.title}</span>
                     </div>
-                    {showDisplayIcons &&(
                         <div className="icons">
-                            <img onClick={handleEditClick} src='./src/assets/edit.svg' alt="edit icon" />
+                            <img  src='./src/assets/edit.svg' alt="edit icon" />
                             <img onClick={() => setshowModal(true)} src='./src/assets/delete_icon.png' alt="delete icon" />
                         </div>
-                    )}
-
                 </li>
             </ul>
             </div>
