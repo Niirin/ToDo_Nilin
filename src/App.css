@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+  color: #66606A;
+}
+
+html{
+  background-color: #FEFCF9;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.title{
+  font-size: 32px;
+  font-weight: 600px;
+  text-align: center;
+}
+
+.addCont{
+  width: 600px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(198, 201, 223, 0.1);
+  border-radius: 28px;
+  margin-bottom: 10px;
+}
+
+.addField{
+  /* padding-left: 20px; */
+  font-size: 16px;
+  font-weight: 400px;
+  text-indent: 30px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  display: flex;
+  justify-content: left;
+  background-color: rgba(198, 201, 223, 0.01);
+}
+
+
+/* remove the input focus blue box, it will be in the wrong place. */
+input:focus {
+  outline: none;
+}
+
+
+.add-btn {
+  font-size: 16px;
+  font-weight: 400px;
+  border:1px solid#6750A4;
+  background:#6750A4;
+  color:white;
+  width: 100px;
+  border-radius: 100px;
+  margin: 5px 5px;
+}
