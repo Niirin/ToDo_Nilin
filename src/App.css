@@ -60,3 +60,114 @@ input:focus {
   border-radius: 100px;
   margin: 5px 5px;
 }
+
+taskList{
+  margin: 5px 0px 5px;
+}
+
+ul{
+  list-style: none;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+.taskDis{
+  background: var(--list, linear-gradient(90deg, rgba(222, 226, 255, 0.75) 0%, rgba(254, 234, 250, 0.48) 73.76%, rgba(255, 162, 81, 0.04) 99.99%, rgba(255, 164, 81, 0.00) 100%));
+  width: 600px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.taskCheck{
+  background-color: inherit;
+  display: flex;
+}
+
+.taskCheck span{
+  padding: 10px;
+}
+
+/* Section for styling TaskDisplay icons */
+.icons{
+  display: flex;
+  justify-content: end;
+}
+
+.icons img{
+  padding: 0px 10px; 
+}
+
+/* Section for overlay delete */
+.modal {
+  position: fixed;
+  z-index: 1040;
+  top: 25%;
+  left: 35%;
+  background-color: white;
+  border: 1px solid rgba(216, 213, 222, 0.601);
+  border-radius: 3px;
+}
+
+.backdrop {
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0.5;
+}
+
+.delete-overlay{
+  width:400px;
+  height: 200px;
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.confirm-cont{
+  width: 300px;
+  height: 60px;
+  background-color: #E2DEFF;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.confirm-msg{
+  padding-left: 10px;
+  font-size: 16px;
+  color:#49454F; 
+}
+
+.confirm-btn{
+  padding: 0px 5px;
+}
+
+.yes-btn{
+  background-color: #6750A4;
+  color: #FFFFFF;
+  height: 30px;
+  width: 50px;
+  border-radius: 20px;
+  border: none;
+}
+
+.no-btn{
+  border: none;
+  background-color: inherit;
+  color: #59606D;
+  height: 30px;
+  width: 50px;
+}
