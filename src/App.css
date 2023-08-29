@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 
-*{
+* {
   font-family: 'Poppins', sans-serif;
   color: #66606A;
 }
 
-html{
+html {
   background-color: #FEFCF9;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
 }
 
-.title{
+.title {
   font-size: 32px;
   font-weight: 600px;
   text-align: center;
 }
 
-.addCont{
+.add-cont {
   width: 600px;
   height: 60px;
   display: flex;
@@ -30,7 +30,7 @@ html{
   margin-bottom: 10px;
 }
 
-.addField{
+.add-field {
   /* padding-left: 20px; */
   font-size: 16px;
   font-weight: 400px;
@@ -53,26 +53,26 @@ input:focus {
 .add-btn {
   font-size: 16px;
   font-weight: 400px;
-  border:1px solid#6750A4;
-  background:#6750A4;
-  color:white;
+  border: 1px solid#6750A4;
+  background: #6750A4;
+  color: white;
   width: 100px;
   border-radius: 100px;
   margin: 5px 5px;
 }
 
-taskList{
+.task-list {
   margin: 5px 0px 5px;
 }
 
-ul{
+ul {
   list-style: none;
   margin-bottom: 0px;
   padding-bottom: 0px;
   padding-left: 10px;
 }
 
-.taskDis{
+.task-dis {
   background: var(--list, linear-gradient(90deg, rgba(222, 226, 255, 0.75) 0%, rgba(254, 234, 250, 0.48) 73.76%, rgba(255, 162, 81, 0.04) 99.99%, rgba(255, 164, 81, 0.00) 100%));
   width: 600px;
   height: 60px;
@@ -85,22 +85,22 @@ ul{
   border-radius: 5px;
 }
 
-.taskCheck{
+.task-check {
   background-color: inherit;
   display: flex;
 }
 
-.taskCheck span{
+.task-check span {
   padding: 10px;
 }
 
 /* Section for styling TaskDisplay icons */
-.icons{
+.icons {
   display: flex;
   justify-content: end;
 }
 
-.icons img{
+.icons img {
   padding: 0px 10px; 
 }
 
@@ -126,8 +126,8 @@ ul{
   opacity: 0.5;
 }
 
-.delete-overlay{
-  width:400px;
+.delete-overlay {
+  width: 400px;
   height: 200px;
   background-color: #FFFFFF;
   display: flex;
@@ -135,7 +135,7 @@ ul{
   align-items: center;
 }
 
-.confirm-cont{
+.confirm-cont {
   width: 300px;
   height: 60px;
   background-color: #E2DEFF;
@@ -145,17 +145,17 @@ ul{
   justify-content: space-between;
 }
 
-.confirm-msg{
+.confirm-msg {
   padding-left: 10px;
   font-size: 16px;
-  color:#49454F; 
+  color: #49454F; 
 }
 
-.confirm-btn{
+.confirm-btn {
   padding: 0px 5px;
 }
 
-.yes-btn{
+.yes-btn {
   background-color: #6750A4;
   color: #FFFFFF;
   height: 30px;
@@ -164,10 +164,49 @@ ul{
   border: none;
 }
 
-.no-btn{
+.no-btn {
   border: none;
   background-color: inherit;
   color: #59606D;
   height: 30px;
   width: 50px;
+}
+
+/* Style for Task Edit */
+.task-edit {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  width: 580px;
+  height: 40px;
+}
+
+.edit-cont {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-task {
+  height: 30px;
+  width: 470px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+
+.save-btn {
+  width: 26px;
+  height: 26px;
+  background-color: #6750A4;
+  padding: 2px;
+  margin: 0px 10px;
+}
+
+.close-edit-btn {
+  width: 26px;
+  height: 26px;
+  background-color: none;
+  padding: 2px;
 }

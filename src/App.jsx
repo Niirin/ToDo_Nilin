@@ -19,9 +19,19 @@ function App() {
     setTasks(updatedTasks);
   };
 
+  const editTaskById= (id, newTitle) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return {...task, title:newTitle} ;
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  }
+
   return (
     <>
-    <div className='title'>
+    <div className="title">
             <h1>ToDo List</h1>
             <p>You have {tasks.length} tasks</p>
       </div>
@@ -29,7 +39,7 @@ function App() {
         <TaskCreate onCreate={createTask} />
       </section>
       <section>
-        <TaskList tasks={tasks} onDelete={deleteTaskById} />
+        <TaskList onEdit={editTaskById} tasks={tasks} onDelete={deleteTaskById} />
       </section>
     </>
   )
