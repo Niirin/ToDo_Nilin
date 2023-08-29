@@ -17,6 +17,11 @@ function TaskDisplay({task, onDelete, onEdit}) {
 
     const [showDisplayIcons, setShowDisplayIcons]= useState(true);
 
+    const handleEditClick= () => {
+        setShowEdit(!showEdit);
+        setShowDisplayIcons(!showDisplayIcons);
+    };
+
     const handleSubmit = (id, newTitle) => {
         setShowEdit(false);
         onEdit(id, newTitle);
