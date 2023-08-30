@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Modal from "react-overlays/Modal";
 import TaskEdit from "./TaskEdit";
+import Checkbox from "./CheckBox";
 
-function TaskDisplay({task, onDelete, onEdit}) {
+function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
     const [showModal, setshowModal] = useState(false);
 
     const handleOff = () => setshowModal(false);
@@ -17,6 +18,8 @@ function TaskDisplay({task, onDelete, onEdit}) {
 
     const [showDisplayIcons, setShowDisplayIcons]= useState(true);
 
+    const [isChecked, setIsChecked]= useState(false);
+
     const handleEditClick= () => {
         setShowEdit(!showEdit);
         setShowDisplayIcons(!showDisplayIcons);
@@ -28,7 +31,14 @@ function TaskDisplay({task, onDelete, onEdit}) {
         setShowDisplayIcons(true);
     }
 
-    let display = <span>{task.title}</span>;
+    const handleCheckBoxChange = () => {
+        setIsChecked(!isChecked);
+        // console.log(task.id, !isChecked);
+        onUpdate(task.id, !isChecked);
+    };
+
+    let display = task.title;
+    
     if (showEdit){
         display = <TaskEdit onSubmit={handleSubmit} task={task} />;
     }
@@ -38,8 +48,11 @@ function TaskDisplay({task, onDelete, onEdit}) {
             <ul>
                 <li className="task-dis">
                     <div className="task-check">
-                        <input type="checkbox" />
-                        <span>{display}</span>
+                    <Checkbox 
+                        label={display} 
+                        checked={isChecked} 
+                        isChecked={isChecked}
+                        onChange={handleCheckBoxChange}/>
                     </div>
                     {showDisplayIcons &&(
                         <div className="icons">
