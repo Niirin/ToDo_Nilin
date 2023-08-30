@@ -90,9 +90,65 @@ ul {
   display: flex;
 }
 
-.task-check span {
-  padding: 10px;
+/* Section for customizing checkbox style */
+.checkbox-wrapper input[type="checkbox"] {
+  /* remove default style */
+  -webkit-appearance: none;
+  appearance: none;
+  /* custom styles */
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  border: 0.01em solid #49454F;
+  outline: none;
+  cursor: pointer;
 }
+
+.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.done {
+  display: flex;
+  justify-content: center;
+}
+
+.done span {
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.checkbox-cont {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.check-area :-ms-input-placeholder {
+  width: 1.4em;
+  height: 1.4em;
+  margin: 0;
+  display: inline-block;
+}
+
+input::before {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 0.15em;
+}
+
+input:checked::before {
+  background-color: #6750A4;
+  content: "\2714";
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  font-size: 1.03em;
+  display: inline-block;
+}
+
 
 /* Section for styling TaskDisplay icons */
 .icons {
