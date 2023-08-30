@@ -105,9 +105,15 @@ ul {
   cursor: pointer;
 }
 
+input[type="checkbox"] {
+  appearance: none;
+}
+
 .checkbox-wrapper {
   display: flex;
   justify-content: center;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .done {
@@ -115,7 +121,7 @@ ul {
   justify-content: center;
 }
 
-.done span {
+.done {
   text-decoration: line-through;
   margin-left: 10px;
 }
@@ -229,6 +235,11 @@ input:checked::before {
 }
 
 /* Style for Task Edit */
+.edit-field {
+  display: flex;
+  justify-content: center;
+}
+
 .task-edit {
   display: flex;
   justify-content: space-between;
@@ -239,30 +250,31 @@ input:checked::before {
 
 .edit-cont {
   display: flex;
-  justify-content: space-between;
 }
 
 .edit-task {
-  height: 30px;
+  height: 25px;
   width: 470px;
   border-radius: 5px;
   border: none;
   font-size: 16px;
   padding-left: 10px;
+  text-decoration: none;
 }
 
 
+
 .save-btn {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   background-color: #6750A4;
   padding: 2px;
   margin: 0px 10px;
 }
 
 .close-edit-btn {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   background-color: none;
   padding: 2px;
 }

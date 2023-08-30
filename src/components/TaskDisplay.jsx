@@ -38,6 +38,7 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
     };
 
     let display = task.title;
+    
     if (showEdit){
         display = <TaskEdit onSubmit={handleSubmit} task={task} />;
     }
