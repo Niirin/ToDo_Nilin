@@ -99,7 +99,7 @@ ul {
   width: 1.4em;
   height: 1.4em;
   border-radius: 0.15em;
-  margin-right: 0.5em;
+  margin-right: 10px;
   border: 0.01em solid #49454F;
   outline: none;
   cursor: pointer;
@@ -121,7 +121,7 @@ input[type="checkbox"] {
   justify-content: center;
 }
 
-.done {
+.done span{
   text-decoration: line-through;
   margin-left: 10px;
 }
@@ -259,7 +259,6 @@ input:checked::before {
   border: none;
   font-size: 16px;
   padding-left: 10px;
-  text-decoration: none;
 }
 
 
