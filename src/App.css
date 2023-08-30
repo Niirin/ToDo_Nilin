@@ -20,6 +20,10 @@ html {
   text-align: center;
 }
 
+.title p {
+  font-size: 24px;
+}
+
 .add-cont {
   width: 600px;
   height: 60px;
@@ -110,14 +114,13 @@ input[type="checkbox"] {
 }
 
 .checkbox-wrapper {
-  display: flex;
-  justify-content: center;
+  display: contents;
   -webkit-appearance: none;
   appearance: none;
 }
 
 .done {
-  display: flex;
+  display: contents;
   justify-content: center;
 }
 
@@ -130,13 +133,6 @@ input[type="checkbox"] {
   height: inherit;
   display: flex;
   align-items: center;
-}
-
-.check-area :-ms-input-placeholder {
-  width: 1.4em;
-  height: 1.4em;
-  margin: 0;
-  display: inline-block;
 }
 
 input::before {
@@ -235,11 +231,6 @@ input:checked::before {
 }
 
 /* Style for Task Edit */
-.edit-field {
-  display: flex;
-  justify-content: center;
-}
-
 .task-edit {
   display: flex;
   justify-content: space-between;
@@ -259,6 +250,7 @@ input:checked::before {
   border: none;
   font-size: 16px;
   padding-left: 10px;
+  margin-top: 3.5px;
 }
 
 
@@ -268,7 +260,7 @@ input:checked::before {
   height: 20px;
   background-color: #6750A4;
   padding: 2px;
-  margin: 0px 10px;
+  margin: 4px 10px 0px 10px;
 }
 
 .close-edit-btn {
