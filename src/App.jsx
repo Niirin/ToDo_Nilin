@@ -29,17 +29,27 @@ function App() {
     setTasks(updatedTasks);
   }
 
+  const updateStatus= (id, status) =>{
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id){
+        return {...task, done:status};
+      }
+      return task;
+    });
+    setTasks(updatedTasks);
+  };
+  const count_task = tasks.length > 1 ? "tasks" : "task";
   return (
     <>
     <div className="title">
             <h1>ToDo List</h1>
-            <p>You have {tasks.length} tasks</p>
+            <p>You have {tasks.length} {count_task}</p>
       </div>
       <section> 
         <TaskCreate onCreate={createTask} />
       </section>
       <section>
-        <TaskList onEdit={editTaskById} tasks={tasks} onDelete={deleteTaskById} />
+        <TaskList onUpdate={updateStatus} onEdit={editTaskById} tasks={tasks} onDelete={deleteTaskById} />
       </section>
     </>
   )

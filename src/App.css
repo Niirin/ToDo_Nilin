@@ -20,6 +20,10 @@ html {
   text-align: center;
 }
 
+.title p {
+  font-size: 24px;
+}
+
 .add-cont {
   width: 600px;
   height: 60px;
@@ -90,9 +94,63 @@ ul {
   display: flex;
 }
 
-.task-check span {
-  padding: 10px;
+/* Section for customizing checkbox style */
+.checkbox-wrapper input[type="checkbox"] {
+  /* remove default style */
+  -webkit-appearance: none;
+  appearance: none;
+  /* custom styles */
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 0.15em;
+  margin-right: 10px;
+  border: 0.01em solid #49454F;
+  outline: none;
+  cursor: pointer;
 }
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+.checkbox-wrapper {
+  display: contents;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.done {
+  display: contents;
+  justify-content: center;
+}
+
+.done span{
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.checkbox-cont {
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+input::before {
+  width: 1.4em;
+  height: 1.4em;
+  border-radius: 0.15em;
+}
+
+input:checked::before {
+  background-color: #6750A4;
+  content: "\2714";
+  color: #FFFFFF;
+  text-align: center;
+  position: relative;
+  font-size: 1.03em;
+  display: inline-block;
+}
+
 
 /* Section for styling TaskDisplay icons */
 .icons {
@@ -183,30 +241,31 @@ ul {
 
 .edit-cont {
   display: flex;
-  justify-content: space-between;
 }
 
 .edit-task {
-  height: 30px;
+  height: 25px;
   width: 470px;
   border-radius: 5px;
   border: none;
   font-size: 16px;
   padding-left: 10px;
+  margin-top: 3.5px;
 }
+
 
 
 .save-btn {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   background-color: #6750A4;
   padding: 2px;
-  margin: 0px 10px;
+  margin: 4px 10px 0px 10px;
 }
 
 .close-edit-btn {
-  width: 26px;
-  height: 26px;
+  width: 20px;
+  height: 20px;
   background-color: none;
   padding: 2px;
 }

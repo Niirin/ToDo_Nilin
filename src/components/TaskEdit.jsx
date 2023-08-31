@@ -18,7 +18,7 @@ function TaskEdit({task, onSubmit}){
         onSubmit(task.id, task.title);
     }
 
-    return <form className="task-edit" >
+    return <form className="task-edit">
         <div className="edit-cont">
             <div className="edit-field">
                 <input className="edit-task" type="text" value={newTask} onChange={handleChange}/>
