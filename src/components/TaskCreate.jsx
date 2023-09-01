@@ -9,7 +9,7 @@ function TaskCreate({onCreate}){
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        onCreate(task);
+        task === '' ? alert("Task cannot be empty"): onCreate(task);
         setTask("");  //resetting the form input to be empty after user clicked on Add
     }
 

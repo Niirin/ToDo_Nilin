@@ -18,14 +18,18 @@ function TaskEdit({task, onSubmit}){
         onSubmit(task.id, task.title);
     }
 
-    return <form className="task-edit">
+    const checkKeyDown = (e) => {
+        if (e.key === 'Enter') e.preventDefault();
+      };
+
+    return <form className="task-edit" onKeyDown={(e) => checkKeyDown(e)}>
         <div className="edit-cont">
             <div className="edit-field">
                 <input className="edit-task" type="text" value={newTask} onChange={handleChange}/>
             </div>
             <div>
-                <img className="save-btn" src="./src/assets/check.svg" alt="save icon" onClick={handleSubmit}/>
-                <img className="close-edit-btn" src="./src/assets/red-close.svg" alt="cancel or close" onClick={handleClose}/>
+                <img className="save-btn" src="/assets/check.svg" alt="save icon" onClick={handleSubmit}/>
+                <img className="close-edit-btn" src="/assets/red-close.svg" alt="cancel or close" onClick={handleClose}/>
             </div>
         </div>
     </form>

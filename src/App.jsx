@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import TaskCreate from'./components/TaskCreate';
 import TaskList from './components/TaskList';
-
+import './App.css'; 
 function App() {
   const [tasks, setTasks] = useState([]);
 
@@ -41,15 +41,19 @@ function App() {
   const count_task = tasks.length > 1 ? "tasks" : "task";
   return (
     <>
-    <div className="title">
-            <h1>ToDo List</h1>
-            <p>You have {tasks.length} {count_task}</p>
-      </div>
-      <section> 
-        <TaskCreate onCreate={createTask} />
-      </section>
-      <section>
-        <TaskList onUpdate={updateStatus} onEdit={editTaskById} tasks={tasks} onDelete={deleteTaskById} />
+    <section className="container-all">
+      <div className="title">
+              <h1>ToDo List</h1>
+              <p>You have {tasks.length} {count_task}</p>
+        </div>
+        <section className="container-task">
+        <div> 
+          <TaskCreate onCreate={createTask} />
+        </div>
+        <div >
+          <TaskList onUpdate={updateStatus} onEdit={editTaskById} tasks={tasks} onDelete={deleteTaskById} />
+        </div>
+        </section>
       </section>
     </>
   )
