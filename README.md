@@ -164,3 +164,6 @@ Images should be named with dashes and lowercase letters.
 - Wrap JSX tags in parentheses when they span more than one line
 - Always self-close a tag that have no children
 - Use arrow functions to close over local variables
+
+
+### Convention Guide reference: https://github.com/airbnb/javascript/tree/master/css-in-javascript

@@ -27,7 +27,7 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
 
     const handleSubmit = (id, newTitle) => {
         setShowEdit(false);
-        newTitle !== "" ? onEdit(id, newTitle) : alert("Edited task name cannot be empty.");
+        newTitle !== "" ? onEdit(id, newTitle) : alert("Edited ask cannot be ");
         setShowDisplayIcons(true);
     }
 
@@ -46,13 +46,12 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
     return <section className="container">
             {/* <div className="task-list"> */}
                 <div className="task-dis">
-                    <div className="task-check">
                     <Checkbox 
                         label={display} 
                         checked={isChecked} 
                         isChecked={isChecked}
                         onChange={handleCheckBoxChange}/>
-                    </div>
+
                     {showDisplayIcons &&(
                         <div className="icons">
                             <img onClick={handleEditClick} src="/assets/edit.svg" alt="edit" />
@@ -61,11 +60,13 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
                     )}                        
                 </div>
             {/* </div> */}
+
             <Modal 
                 className="modal"
                 show={showModal}
                 onHide={handleOff}
                 renderBackdrop={renderBackdrop}>
+
                     <div className="delete-overlay">
                         <div className="confirm-cont">
                             <div className="confirm-msg">

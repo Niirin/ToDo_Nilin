@@ -7,11 +7,7 @@
 
 .container {
   display: flex;
-  /* justify-content: center; */
-}
-
-html {
-  background-color: #FEFCF9;
+  justify-content: center;
 }
 
 body{
@@ -24,7 +20,6 @@ body{
   width: 100%;
   /* background-color: goldenrod; */
   min-height: 300px;
-  text-align: center;
 }
 
 .container-task {
@@ -96,7 +91,7 @@ ul {
 .task-dis {
   background: var(--list, linear-gradient(90deg, rgba(222, 226, 255, 0.75) 0%, rgba(254, 234, 250, 0.48) 73.76%, rgba(255, 162, 81, 0.04) 99.99%, rgba(255, 164, 81, 0.00) 100%));
   width: 100%;
-  height: 60px;
+  height: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -107,16 +102,15 @@ ul {
   margin: 10px;
 }
 
-.task-check {
-  background-color: inherit;
-  display: flex;
-  overflow: hidden;
+.text-dis {
+  align-self: start;
+  width: 100%;
+  word-break: break-all;
 }
 
 /* Section for customizing checkbox style */
 .checkbox-wrapper input[type="checkbox"] {
   /* remove default style */
-  -webkit-appearance: none;
   appearance: none;
   /* custom styles */
   width: 1.4em;
@@ -133,15 +127,17 @@ input[type="checkbox"] {
 }
 
 .checkbox-wrapper {
-  display: contents;
-  -webkit-appearance: none;
+  display: flex;
   appearance: none;
-  justify-content: space-between;
+  overflow: hidden;
+  align-items: center;
+  align-self: flex-start;
 }
 
 .done {
-  display: contents;
+  display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .done p{
@@ -154,9 +150,6 @@ input[type="checkbox"] {
   align-items: center;
 }
 
-/* .text-dis {
-
-} */
 
 input::before {
   width: 1.4em;
@@ -307,22 +300,39 @@ input:checked::before {
     width: 100% !important;
   }
 
-  /* .modal {
-    
-  } */
+  .modal {
+    top: 30%;
+    left: 23%;
+  }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 576px) {
+
+
   .container-all {
     width: 50%;
-    margin: 10% 0% 10% 36%;
-  }
-
-  body {
-    margin: auto;
+    margin-right: 133px;
+    /* margin: 10% 0% 10% 36%; */
   }
 
   .task-dis {
     width: 100% !important;
   }
+
+  .modal {
+    top: 20%;
+    left: 26%;
+  }
+
+  .delete-overlay {
+    width: 100%;
+    height: 160px; 
+  }
+
+  .confirm-cont {
+    width: 280px;
+    height: 50px;
+    margin: 10px
+  }
+
 }
