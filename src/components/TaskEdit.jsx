@@ -18,7 +18,11 @@ function TaskEdit({task, onSubmit}){
         onSubmit(task.id, task.title);
     }
 
-    return <form className="task-edit">
+    const checkKeyDown = (e) => {
+        if (e.key === 'Enter') e.preventDefault();
+      };
+
+    return <form className="task-edit" onKeyDown={(e) => checkKeyDown(e)}>
         <div className="edit-cont">
             <div className="edit-field">
                 <input className="edit-task" type="text" value={newTask} onChange={handleChange}/>

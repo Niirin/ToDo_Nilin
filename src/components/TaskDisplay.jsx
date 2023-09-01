@@ -44,9 +44,8 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
     }
     
     return <section className="container">
-            <div className="task-list">
-            <ul>
-                <li className="task-dis">
+            {/* <div className="task-list"> */}
+                <div className="task-dis">
                     <div className="task-check">
                     <Checkbox 
                         label={display} 
@@ -60,9 +59,8 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
                             <img onClick={() => setshowModal(true)} src="./src/assets/delete_icon.png" alt="delete" />
                         </div>
                     )}                        
-                </li>
-            </ul>
-            </div>
+                </div>
+            {/* </div> */}
             <Modal 
                 className="modal"
                 show={showModal}

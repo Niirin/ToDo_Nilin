@@ -10,7 +10,7 @@ const Checkbox = ({label, isChecked, onChange}) => {
                     checked={isChecked}
                     onChange={onChange} 
                     />
-                    <span>{label}</span>
+                    <p className="text-dis">{label}</p>
             </div>
         </div>
     );
