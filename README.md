@@ -26,7 +26,33 @@ Modal : import from react-modal
 # App Flow: https://www.figma.com/file/shUrcbIEFZsRylvZbTR2cM/ToDo-React-App-Flow?type=whiteboard&node-id=0%3A1&t=U2X57XQsCoVNKYL9-1
 
 # Git Flow Method
-### 1. 
+### 1. Main Branch:
+- 1st commit and Main stores the source as well as stable versions of the code
+
+### 2. Develop:
+- It's the base branch of all feature branches and release branch.
+- Develop branch initially contains source code from main and add task function
+- All feature branches (issue1, issue 2, and issue 3) are merged into develop.
+-Develop represent the latest state of the App being developed.
+
+### 3. Feature Branches:
+- Features that represents all the functions of the app
+    - The feature branches include:
+        * feature/issue1: Delete Task
+        * feature/issue2: Edit task
+        * feature/issue3: Toggle checkbox customization
+
+### 4. Release Branch:
+- This is the branch for the app deployment and is based off of develop branch.
+- The tag is in the form of 1.0, 1.1, etc.
+- Current release version: release/1.0
+
+### 5.Bugfix branch:
+- This is the branch used when fixing bugs in release branch. 
+- This branch is branched for the current release/1.0 branch.
+
+### 6. Hotfix branch:
+- There are no current hotfix branch as of yet but once release is finished, it will be used to fix urgent bugs if found.
 
 # Convention Guide- ToDo React App:
 

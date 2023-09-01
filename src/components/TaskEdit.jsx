@@ -28,8 +28,8 @@ function TaskEdit({task, onSubmit}){
                 <input className="edit-task" type="text" value={newTask} onChange={handleChange}/>
             </div>
             <div>
-                <img className="save-btn" src="./src/assets/check.svg" alt="save icon" onClick={handleSubmit}/>
-                <img className="close-edit-btn" src="./src/assets/red-close.svg" alt="cancel or close" onClick={handleClose}/>
+                <img className="save-btn" src="/assets/check.svg" alt="save icon" onClick={handleSubmit}/>
+                <img className="close-edit-btn" src="/assets/red-close.svg" alt="cancel or close" onClick={handleClose}/>
             </div>
         </div>
     </form>

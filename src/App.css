@@ -307,9 +307,9 @@ input:checked::before {
     width: 100% !important;
   }
 
-  .modal {
+  /* .modal {
     
-  }
+  } */
 }
 
 @media screen and (max-width: 414px) {
