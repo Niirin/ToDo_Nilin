@@ -306,6 +306,10 @@ input:checked::before {
   .task-dis {
     width: 100% !important;
   }
+
+  .modal {
+    
+  }
 }
 
 @media screen and (max-width: 414px) {
