@@ -1,6 +1,8 @@
 # ToDo List App by Nilin LAY
 This ToDo app is built using React and have components that allow adding, deleting, editing and mark complete features. 
 
+# Deployed APP: https://to-do-host.vercel.app/
+
 ## Tech Used
 - React JS
 - CSS
