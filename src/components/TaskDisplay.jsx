@@ -27,7 +27,7 @@ function TaskDisplay({task, onDelete, onEdit, onUpdate}) {
 
     const handleSubmit = (id, newTitle) => {
         setShowEdit(false);
-        onEdit(id, newTitle);
+        newTitle !== "" ? onEdit(id, newTitle) : alert("Edited task name cannot be empty.");
         setShowDisplayIcons(true);
     }
 

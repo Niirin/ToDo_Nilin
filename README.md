@@ -49,6 +49,7 @@ Modal : import from react-modal
 
 ### 5.Bugfix branch:
 - This is the branch used when fixing bugs in release branch. 
+- The current bugfix used is the bugfix/issue11 branch.
 - This branch is branched for the current release/1.0 branch.
 
 ### 6. Hotfix branch:
