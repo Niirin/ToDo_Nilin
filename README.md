@@ -23,7 +23,7 @@ Modal : import from react-modal
 
 
 # Folder Structure
-![Folder structure screenshot](./src/assets/folder-structure.jpeg)
+![Folder structure screenshot](public/assets/folder-structure.jpeg)
 
 # App Flow: https://www.figma.com/file/shUrcbIEFZsRylvZbTR2cM/ToDo-React-App-Flow?type=whiteboard&node-id=0%3A1&t=U2X57XQsCoVNKYL9-1
 
